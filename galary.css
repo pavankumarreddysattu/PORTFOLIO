@@ -1,0 +1,295 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  font-weight: 300;
+
+}
+.main {
+  margin: 7rem auto;
+}
+.all {
+  display: flex;
+  perspective: 1500px; /* Increased perspective for more depth */
+  transform: perspective(1000px) rotateX(20deg);
+  will-change: transform;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: all 1.5s ease-out;
+}
+.all:hover {
+  transform: perspective(2000px) rotateX(0deg); /* Smooth rotation when hovered */
+  transition: all 0.8s ease-in-out;
+}
+
+.left, .center, .right, .lefter, .righter {
+  width: 230px;
+  height: 300px;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+  opacity: 0;
+}
+.all:hover .left, .all:hover .center, .all:hover .right, .all:hover .lefter, .all:hover .righter {
+  opacity: 1; /* Fade in all elements on hover */
+}
+
+.left {
+  transform: translateX(-60px) translateZ(-100px) rotateY(-15deg);
+}
+.center {
+  transform: translateZ(0) scale(1.1); /* Bring center to front */
+  background-image: url('https://img.freepik.com/free-vector/interaction-design-concept-illustration_114360-1442.jpg');
+}
+.right {
+  transform: translateX(60px) translateZ(-100px) rotateY(15deg);
+}
+.lefter {
+  transform: translateX(-120px) translateZ(-150px) rotateY(-20deg);
+}
+.righter {
+  transform: translateX(120px) translateZ(-150px) rotateY(20deg);
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease, background 0.3s ease;
+}
+.box:hover {
+  transform: rotateY(15deg) scale(1.05); /* 3D rotation on hover */
+  background: rgba(255, 84, 33, 0.8);
+}
+
+.circle {
+  background: #fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.box i {
+  color: #ff5421;
+  font-size: 1.5rem;
+}
+
+h6 {
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Keeps particles behind all content */
+  pointer-events: none; /* Ensures it doesn't interfere with interactions */
+}
+
+.center {
+  transform: translateZ(0) scale(1.1); /* Bring center to front */
+  /* Remove or modify the background image */
+  background-image: none; /* or change to another image */
+}
+
+
+/* Remove background colors that obstruct the particles animation */
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: transparent; /* Ensure no background color obstructs the particles */
+  color: #e3f2fd;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Keeps particles behind all content */
+  pointer-events: none; /* Prevents interference with interactions */
+}
+
+.hero-section, 
+#about, 
+#skills, 
+#projects, 
+#experience, 
+#contact {
+  background-color: transparent; /* Set all sections to transparent */
+}
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+nav {
+  display: flex;
+  justify-content: flex-end; /* Aligns the navigation to the right */
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(26, 26, 46, 0.9);
+  z-index: 10;
+}
+
+nav a {
+  color: #e3f2fd;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 15px; /* Adds spacing inside the link */
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+nav a:hover {
+  background-color: rgba(0, 188, 212, 0.7); /* Adds a background hover effect */
+  color: #ffffff; /* Change text color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ensure the body and section backgrounds are transparent */
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: transparent; /* Remove any solid background color */
+  color: #e3f2fd;
+}
+
+/* Particles.js Background */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Keep particles behind all content */
+  pointer-events: none; /* Allow interaction with content above */
+}
+
+/* Make all sections transparent to see the animation through */
+.hero-section,
+#about,
+#skills,
+#projects,
+#experience,
+#contact {
+  background-color: transparent !important; /* Force transparency */
+  box-shadow: none; /* Remove any shadows that might darken the background */
+}
+
+/* Modify the card and skill boxes to be semi-transparent */
+.card, .project-card {
+  background: rgba(45, 55, 72, 0.8); /* Slight transparency for the card background */
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Lighter shadow for less obstruction */
+  transform-style: preserve-3d;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover, .project-card:hover {
+  transform: rotateY(10deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Keep the shadow light on hover */
+}
+
+
+
+
+
+/* Ensure the entire page and sections are transparent */
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: transparent; /* No background color */
+  color: #e3f2fd;
+}
+
+#particles-js {
+  position: fixed; /* Fixed position to ensure it stays behind content while scrolling */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Keeps particles behind all content */
+  pointer-events: none; /* Allow interactions with content above */
+}
+
+/* Make all sections transparent to ensure particles are visible */
+.hero-section, 
+#about, 
+#skills, 
+#projects, 
+#experience, 
+#contact {
+  background-color: transparent !important; /* Enforces transparency */
+}
+
+/* Update cards and other elements for better visibility */
+.card, .project-card {
+  background: rgba(45, 55, 72, 0.6); /* Light transparency for better visibility */
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Lighter shadow to keep particles visible */
+  transform-style: preserve-3d;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover, .project-card:hover {
+  transform: rotateY(10deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Slightly darker shadow on hover */
+}
+
+
+
+/* Ensure the particles background covers the entire page */
+
+nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional thin border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+}
+html {
+  scroll-behavior: smooth;
+}
